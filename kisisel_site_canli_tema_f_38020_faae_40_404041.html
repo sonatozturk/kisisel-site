@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ad Soyad — Solüsyon Hazırlama Operatörü</title>
+  <meta name="description" content="Steril üretimde solüsyon hazırlama, CIP/SIP, filtrasyon ve filtre bütünlük testleri." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --brand1:#f38020;
+      --brand2:#faae40;
+      --ink:#404041;
+      --bg:#ffffff;
+      --fg:#1b1c1e;
+      --muted:#5a5d66;
+      --card:#f7f7f8;
+      --bd:#e5e6eb;
+      --ring: 0 8px 24px rgba(0,0,0,.08);
+      --ring-strong: 0 10px 40px rgba(0,0,0,.15);
+      --max:1080px;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg:#111214;
+        --fg:#e9eaee;
+        --muted:#b1b5c0;
+        --card:#191b1f;
+        --bd:#2a2d34;
+      }
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial}
+    a{color:var(--brand1);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--max);margin:auto;padding:24px}
+    header{position:sticky;top:0;z-index:20;background:linear-gradient(180deg,var(--bg) 60%,transparent);backdrop-filter:saturate(180%) blur(8px);}
+    .nav{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--bd);padding:12px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800}
+    .logo{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--brand1),var(--brand2));box-shadow:var(--ring)}
+    nav a{margin-left:18px;font-weight:600;color:var(--ink)}
+    nav a:hover{color:var(--brand1)}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:42px 0}
+    .hero h1{margin:0 0 10px;font-size:34px}
+    .hero p{margin:0 0 14px;color:var(--muted)}
+    .avatar{aspect-ratio:1/1;border-radius:18px;background:linear-gradient(135deg,#222,#333);border:1px solid var(--bd);box-shadow:var(--ring);overflow:hidden}
+    .avatar img{width:100%;height:100%;object-fit:cover;border-radius:18px}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:linear-gradient(90deg,var(--brand1),var(--brand2));color:#111;font-weight:700}
+    .btn{display:inline-flex;align-items:center;gap:10px;border:none;border-radius:10px;padding:8px 14px;font-weight:600;cursor:pointer;font-size:15px}
+    .btn.primary{background:linear-gradient(135deg,var(--brand1),var(--brand2));color:#111;box-shadow:var(--ring)}
+    section{padding:28px 0}
+    .card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px 16px;box-shadow:var(--ring)}
+    .grid{display:grid;gap:16px}
+    @media(min-width:820px){.grid.cols-2{grid-template-columns:1fr 1fr} .grid.cols-3{grid-template-columns:1fr 1fr 1fr}}
+    .chip{display:inline-block;padding:6px 10px;border-radius:999px;font-size:13px;font-weight:600;color:var(--fg);background:linear-gradient(90deg,var(--brand1),var(--brand2));box-shadow:0 2px 8px rgba(0,0,0,.15)}
+    .progress-bar{width:100%;background:#ddd;border-radius:8px;height:12px;overflow:hidden;margin-top:6px;}
+    .progress-fill{height:100%;background:linear-gradient(90deg,var(--brand1),var(--brand2));border-radius:8px}
+    .skill{margin-bottom:12px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="nav">
+        <div class="brand"><div class="logo"></div><span>Ad Soyad</span></div>
+        <nav>
+          <a href="#hakkimda">Hakkımda</a>
+          <a href="#deneyim">Deneyim</a>
+          <a href="#yetkinlik">Yetkinlik</a>
+          <a href="#projeler">Projeler</a>
+          <a href="#iletisim">İletişim</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <span class="pill">CIP/SIP • Filtrasyon • Bütünlük Testleri</span>
+          <h1>Steril İmalatta Solüsyon Hazırlama</h1>
+          <p>GMP odağında izlenebilir, güvenli ve standartlara uyumlu hazırlık. Aseptik süreçlerde MBR ve log kayıtlarıyla kesintisiz akış.</p>
+          <a class="btn primary" href="#iletisim">İletişime geç</a>
+        </div>
+        <div class="avatar" role="img" aria-label="Profil Görseli">
+          <img src="profil.jpg" alt="Profil Fotoğrafı" />
+        </div>
+      </section>
+
+      <section id="hakkimda" class="reveal">
+        <div class="card">
+          <h2>Hakkımda</h2>
+          <p>1.5+ yıl steril üretimde solüsyon hazırlama tecrübesi. 0.2 µm filtrasyon, diferansiyel basınç izleme ve filtre bütünlük testleri (Sartocheck 5 Plus). Kayıtların eksiksiz tutulması, sapmaların zamanında bildirilmesi, güvenli ve düzenli hazırlık.</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
+            <span class="chip">PW/WFI</span>
+            <span class="chip">Temiz Oda</span>
+            <span class="chip">GDP/GMP</span>
+            <span class="chip">Excel/Sheets</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="deneyim">
+        <h2>Deneyim</h2>
+        <div class="grid cols-2">
+          <div class="card">
+            <h3>Solüsyon Hazırlama Operatörü</h3>
+            <p style="color:var(--muted)">Türkiye’de yerleşik bir ilaç üreticisi · 2024–güncel</p>
+            <ul>
+              <li>SIP sonrası filtre bütünlük testleri; uygunsuzlukta tekrar test ve kayıt.</li>
+              <li>0.2 µm filtrasyonda diferansiyel basınç takibi ve MBR girişi.</li>
+              <li>CIP/SIP döngülerinde sapma ve arıza kayıtlarının tutulması.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Operasyon Destek</h3>
+            <p style="color:var(--muted)">(Varsa önceki rol) · yıl–yıl</p>
+            <ul>
+              <li>Hammadde–ambalaj kabul ve lot takibi.</li>
+              <li>Hijyen ve temiz oda kuralları uygulaması.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="yetkinlik" class="grid cols-2">
+        <div class="card">
+          <h2>Yetkinlikler</h2>
+          <div class="skill"><strong>CIP/SIP</strong><div class="progress-bar"><div class="progress-fill" style="width:90%"></div></div></div>
+          <div class="skill"><strong>Filtrasyon (0.2 µm)</strong><div class="progress-bar"><div class="progress-fill" style="width:85%"></div></div></div>
+          <div class="skill"><strong>Filtre Bütünlük Testleri</strong><div class="progress-bar"><div class="progress-fill" style="width:75%"></div></div></div>
+          <div class="skill"><strong>Temiz Oda Davranışı</strong><div class="progress-bar"><div class="progress-fill" style="width:90%"></div></div></div>
+          <div class="skill"><strong>MBR/Log Kayıt</strong><div class="progress-bar"><div class="progress-fill" style="width:88%"></div></div></div>
+        </div>
+        <div class="card">
+          <h2>Araçlar</h2>
+          <ul>
+            <li>Sartocheck 5 Plus — BP/Diffusion</li>
+            <li>pH/İletkenlik Ölçer — Kalibrasyon takibi</li>
+            <li>PW/WFI Hatları — Numune ve kayıt</li>
+            <li>Excel/Sheets — Log ve DP takibi</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="projeler">
+        <h2>Projeler / Notlar</h2>
+        <div class="grid cols-3">
+          <div class="card">
+            <h3>CIP Başlatma Kartı (A6)</h3>
+            <p>Kısa kontrol listesi: ön kontrol, kimyasal, sıcaklık, hat izolasyonu.</p>
+            <a class="btn primary" href="#">PDF (yakında)</a>
+          </div>
+          <div class="card">
+            <h3>DP Takip Şablonu</h3>
+            <p>Filtrasyon öncesi/sonrası DP girişleri, basit grafik.</p>
+            <a class="btn primary" href="#">XLSX (yakında)</a>
+          </div>
+          <div class="card">
+            <h3>ClickSensei</h3>
+            <p>Mouse çift tıklama testi (kişisel proje).</p>
+            <a class="btn primary" href="#">Demo</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="iletisim" class="grid cols-2">
+        <div class="card">
+          <h2>İletişim</h2>
+          <p>E-posta: <a href="mailto:ad.soyad@example.com">ad.soyad@example.com</a><br>LinkedIn/GitHub: (varsa link ekle)</p>
+          <a class="btn primary" href="mailto:ad.soyad@example.com?subject=Web%20sitesi%20ile%20iletişim">E-posta Gönder</a>
+        </div>
+        <div class="card">
+          <h2>Sertifikalar</h2>
+          <ul>
+            <li>GMP Farkındalık (yyyy)</li>
+            <li>Hijyen Eğitimi (yyyy)</li>
+            <li>İSG Temel Eğitimi (yyyy)</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
